@@ -9,3 +9,19 @@ Code is no longer the hard part. LLMs give us an opportunity to let go of the co
 With Grow, developers define the fundemental structure like tests and reqiurements first. LLMs can then help us generate the code, and we can use our structure to validate and complete that work. We can also use the AI to modify or optimize the code. For instance, quickly updating code because an third-party API changed or automatically converting code from Python to Rust for optimization purposes.
 
 Still we don't want to let go of everything all at once; we an still use grow with github and hand-generated code, but that takes a back-seat to the more difficult problems.
+
+## Fundemental Entities
+
+### Actors
+
+- Represent running processes
+- Communicate with messages
+- Are defined by:
+  - Configuration parameters for running
+  - Types of incoming messages they respond to
+  - Types of outgoung messages they send
+  - Integrations with other services like databases and third-party services
+  - Performance and scaling parameters
+- Are tested by defining example configuration, incoming messages, resulting outgoing messages
+- Can be interacted with and debugged live, for instance by going into their running environment
+
