@@ -14,14 +14,40 @@ Still we don't want to let go of everything all at once; we an still use grow wi
 
 ### Actors
 
-- Represent running processes
+- Represent scalable, running processes
 - Communicate with messages
 - Are defined by:
-  - Configuration parameters for running
+  - Documentation, goals, requirements, and examples
+  - Configuration parameters
   - Types of incoming messages they respond to
   - Types of outgoung messages they send
-  - Integrations with other services like databases and third-party services
+  - Integrations with other services like databases and third-party APIs
   - Performance and scaling parameters
 - Are tested by defining example configuration, incoming messages, resulting outgoing messages
 - Can be interacted with and debugged live, for instance by going into their running environment
 
+### Workflows
+
+- Represent graphs of coordinated Actors
+- Are defined by:
+  - Documentation, goals, requirements, and examples
+  - Configuration parameters
+  - Set of Actors and their configurations
+  - Routes to dispatch messages between them
+  - Rules for selecting routes
+  - Performance and scaling parameters
+- Are tested by defining example configuration, incoming messages, resulting outgoing messages
+
+### Services
+
+- Represent interfaces to running actors and workflows
+- Are defined by:
+  - Documentation, goals, requirements, and examples
+  - Configuration parameters
+  - Interfaces like HTTP Endpoints
+  - Performance and scaling parameters
+- Basic dashboards, monitoring, logging, and general visibility; athird-party services can be used as well with via Open Telemetry
+- Alerting of errors and performance issues
+- Consumers/Customers can be managed, handling api-keys, rate-limiting, billing and payments
+- Versioning, and backwards compatibility is tracked, consumers can be notified
+- Continuous deployment is achieved easily since actors and workflows are thoroughly tested
