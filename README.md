@@ -14,7 +14,7 @@ Still we don't want to let go of everything all at once; we an still use grow wi
 
 ### Actors
 
-- Represent scalable, running processes
+- Represent scalable, running processes or thread
 - Communicate with messages
 - Are defined by:
   - Documentation, goals, requirements, and examples
@@ -51,3 +51,20 @@ Still we don't want to let go of everything all at once; we an still use grow wi
 - Consumers/Customers can be managed, handling api-keys, rate-limiting, billing and payments
 - Versioning, and backwards compatibility is tracked, consumers can be notified
 - Continuous deployment is achieved easily since actors and workflows are thoroughly tested
+
+## Implementation Plan
+
+### Beginning Requirements
+- Deployment can be on some specific platform for now until someone needs something else
+- Let's make configuration YAML files for now, with a nice CLI, and a UI later; but we need a UI in the cloud to be really useful
+- Feature: Create/Manage a Service
+- Feature: Create/Manage an Actor in a Service
+- Feature: Manage multiple documents on the Actor that represent the code
+- Feature: Start the service / Spawn the Actor
+- Feature: Route messages
+- Feature: Live debug actor
+- Feature: Automatic Testing
+- Feature: LLM generation/modification
+- Feature: Create/Manage a Workflow
+- Feature: Rule-based message routing
+
